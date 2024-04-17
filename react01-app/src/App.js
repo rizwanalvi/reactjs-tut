@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>Happy Eid!</h1>
-      <input type='text' onChange={()=>{setName('Ahmed Khan 01')}} /> 
+      <input type='text' onChange={(e)=>{setName(e.target.value)}} /> 
       <Heading />
       <Heading1 />
       <Heading />
