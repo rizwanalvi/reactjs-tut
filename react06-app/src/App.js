@@ -6,8 +6,11 @@ function App() {
   let userref = useRef();
   let [usemsg,setusermsg] = useState('');
   const OnButtonClick = ()=>{
-    
+    const reg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     console.log(userref.current.value)
+    const isvalid = reg.test(userref.current.value);
+    console.log(isvalid)
+    
     if(userref.current.value == ""){
 
       setusermsg("Input box is Empty")
